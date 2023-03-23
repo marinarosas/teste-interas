@@ -12,7 +12,7 @@ export const MenuContainerStyled = styled.div`
     height: 1000px;
 `
 
-export const MenuTitle = styled.h1`
+export const MenuTitleStyled = styled.h1`
     border: 1px solid pink;
     height: 42px;
     font-family: 'Baloo 2', cursive;
@@ -22,4 +22,13 @@ export const MenuTitle = styled.h1`
     padding: 0 128px;
     color: #403937;
     display: flex;
+`
+
+export const CoffeeCardsStyles = styled.div`
+    border: 2px solid brown;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 32px;
+    padding: 0 120px;
+    padding-top: 50px;
 `

@@ -2,18 +2,18 @@ import { useEffect, useState } from 'react';
 import { GlobalStyles } from './GlobalStyles';
 import { GlobalContext } from '../src/context/GlobalContext'
 import { HomePage } from "./pages/HomePage";
-import coffees from '../src/coffees'
+import coffees from '../src/coffees.json'
 
 function App() {
 
-  //const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || [])
-  const [cart, setCart] = useState([])
+  const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || [])
+  const [cart, setCart] = useState(cartFromLocalStorage)
 
   const totalQuantity = cart.reduce((acc, coffeeProduct) => (coffeeProduct.quantity) + acc, 0)
 
-  // useEffect(() => {
-  //   localStorage.setItem("cart", JSON.stringify(cart))
-  // })
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart))
+  }, [cart])
 
   const addCoffeeInCart = (productToAdd) => {
     const newCart = [...cart]
@@ -27,7 +27,7 @@ function App() {
       productFound.quantity++
     }
     setCart(newCart)
-    //localStorage.setItem("cart", JSON.stringify(newCart))
+    localStorage.setItem("cart", JSON.stringify(newCart))
   }
 
   const removeCoffeeOfCart = (productToRemove) => {
