@@ -1,6 +1,6 @@
 import React from 'react'
 import { AdvertisingTopStyled, BenefitStyled, LeftSideStyled, RightSideStyled, TextStyled, TitlesStyled } from './AdvertisingTop.styled'
-import coffeeCup from '../../assets/coffeCup.png'
+import coffeeCup from '../../assets/cupCoffee.svg'
 import cartRoundIcon from '../../assets/icon/cartRoundIcon.svg'
 import clockRoundIcon from '../../assets/icon/clockRoundIcon.svg'
 import packRoundIcon from '../../assets/icon/packRoundIcon.svg'
