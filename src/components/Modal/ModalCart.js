@@ -1,69 +1,57 @@
-// import { Flex, Heading, Text } from '@chakra-ui/react';
-// import Modal from 'react-modal';
-// import React, { useContext } from 'react';
-// import { GlobalContext } from '../../contexts/GlobalContext';
+import { Button, Container, Flex, Heading, Image, Text } from '@chakra-ui/react';
+//import Modal from 'react-modal';
+import React, { useContext } from 'react';
+import { GlobalContext } from '../../contexts/GlobalContext';
+import { priceFormatter } from '../../util/priceFormatter';
+import  {ModalStyled}  from './ModalCart.styled';
 
-// export const ModalCart = () => {
+export const ModalCart = (props) => {
 
-//   const context = useContext(GlobalContext)
-//   const { isOpen, setIsOpen, isOpenClose, setIsOpenClose } = context
+    const context = useContext(GlobalContext)
+    const { totalPrice } = context
+    const { coffee } = props
 
-//   function closeModal() {
-//     setIsOpen(false)
-//     setIsOpenClose(false)
-//   }
+    return (
+        <>
+            <ModalStyled>
+                <Flex
+                    border= '2px solid blue'
+                    justifyContent='center'
+                    alignItems='center'
+                    //onClick={closeModal}
+                    position='absolute'
+                >
 
-//   const customStyle = {
-//     content: {
-//       top: '50%',
-//       left: '50%',
-//       right: 'auto',
-//       bottom: 'auto',
-//       marginRight: '-50%',
-//       transform: 'translate(-50%, -50%)',
-//       border: 'none',
-//       borderRadius: '12px',
-//       width: '450px',
-//       height: '220px',
-//       display: 'flex',
-//       justifyContent: 'center',
-//       alignItems: 'center',
-//       flexDirection: 'column',
-//     },
-//     overlay: {
-//       backgroundColor: 'rgba(0, 0, 0, 0.50)',
-//       zIndex: '1000'
+                    <Image src={coffee.image} width='3rem' height='3rem' />
+                    <Flex
+                        //border='2px solid green'
+                        flexDirection='column'
+                        gap='1rem'
+                    >
+                        <Flex flexDirection='column' gap='0.5rem'>
+                            <Heading fontSize='1rem' fontWeight='700' fontFamily='Baloo 2' textAlign='center'> {coffee.name}</Heading>
+                            <Text fontSize='0.8rem' fontWeight='400' fontFamily='Roboto' textAlign='center' width='15rem'>{coffee.description}</Text>
+                        </Flex>
 
-//     }
-//   }
+                        <Flex bottom='0' gap='0.5rem' width='15rem'>
+                            <Text fontSize='0.8rem' fontWeight='700' fontFamily='Roboto' paddingLeft='0.6rem'>Quantidade:</Text>
+                            <Text fontSize='0.8rem' fontWeight='400' fontFamily='Roboto'>1{coffee.quantity}</Text>
+                        </Flex>
+                        <hr></hr>
+                    </Flex>
+                </Flex>
+                <Flex
+                    //border='2px solid green'
+                    flexDirection='column'
+                    alignSelf='flex-end'
+                    textAlign='right'
+                    gap='1rem'
+                >
+                    
+                    
+                </Flex>
 
-//   return (
-//     <>
-//       <Modal
-//         isOpen={isOpen || isOpenClose}
-//         onRequestClose={closeModal}
-//         style={customStyle}
-//       >
-//         <Flex
-//           justifyContent='center'
-//           alignItems='center'
-//           flexDirection='column'
-//           onClick={closeModal}
-
-//         >
-//           {
-//             isOpenClose ?
-//               <>
-//                 <Heading fontSize='48px' fontWeight='700'> Oh No!</Heading>
-//                 <Text fontSize='16px' fontWeight='700' >O Pokemón foi removido da sua Pokedex!</Text>
-//               </> :
-//               <>
-//                 <Heading fontSize='48px' fontWeight='700'> Gotcha!</Heading>
-//                 <Text fontSize='16px' fontWeight='700'>O Pokemón foi adicionado a sua Pokedex!</Text>
-//               </>
-//           }
-//         </Flex>
-//       </Modal>
-//     </>
-//   )
-// }
+            </ModalStyled>
+        </>
+    )
+}

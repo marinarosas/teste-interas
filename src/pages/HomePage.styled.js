@@ -14,7 +14,7 @@ export const CardapioTitleStyled = styled.h1`
 export const CoffeeCardsStyles = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 22rem 22rem 22rem 22rem;
     padding: 0 7.5rem;
     padding-top: 4rem;
     height: 99rem;

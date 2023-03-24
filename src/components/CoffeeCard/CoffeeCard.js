@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { BodyOfCardStyled, BtnPriceStyled, CardBackgroundStyled, CartPurpleIcon, CoffeeDescriptionStyled, CoffeeImgStyled, CoffeeNameStyled, CoffeeTypeStyled, QuantityContainerStyled, TypesContainerStyled } from './CoffeeCard.styled'
 import cartIcon from '../../assets/icon/cartPurpleIcon.svg'
 import { priceFormatter } from '../../util/priceFormatter'
+import { GlobalContext } from '../../contexts/GlobalContext'
 
 export const CoffeeCard = (props) => {
+
+  const context = useContext(GlobalContext)
+
+  const { quantityToAdd } = context
 
   const { coffee, addCoffeeInCart, increaseQuantityInCart, decreaseQuantityInCart } = props
 
@@ -28,9 +33,10 @@ export const CoffeeCard = (props) => {
         </div>
         <div>
           <QuantityContainerStyled>
-            <button onClick={() => decreaseQuantityInCart(coffee)}>-</button>
-            {coffee.quantity <= 0 ? <h2>0</h2> : <h2>{coffee.quantity}</h2>}
-            <button onClick={() => increaseQuantityInCart(coffee)}>+</button>
+            <button onClick={() => decreaseQuantityInCart()}><div></div></button>
+            <h3>{quantityToAdd}</h3>
+            {/* {coffee.quantity <= 0 ? <h2>0</h2> : <h3>{coffee.quantity}</h3>} */}
+            <button onClick={() => increaseQuantityInCart()}>+</button>
           </QuantityContainerStyled>
           <CartPurpleIcon onClick={() => addCoffeeInCart(coffee)}>
             <img src={cartIcon} alt='Cart Button Image'/>
