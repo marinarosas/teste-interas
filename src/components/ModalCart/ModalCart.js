@@ -31,22 +31,6 @@ export const ModalCart = (props) => {
                 <Image src={coffee.image} width='3.5rem' height='3.5rem' />
                 <Flex flexDirection='column' gap='1rem'>
                     <Flex flexDirection='column' gap='0.5rem'>
-                        <Button
-                            bgColor='#F1E9C9'
-                            padding='0'
-                            minWidth='1rem'
-                            maxHeight='1rem'
-                            onClick={() => removeCoffeeOfCart(coffee)}
-                            justifySelf='flex-end'
-                            alignSelf='flex-end'
-                        >
-                            <Image
-                                src={trashIcon}
-                                alt='Trash Icon'
-                                width='0.7rem'
-                                height='0.7rem'
-                            />
-                        </Button>
                         <Heading
                             fontSize='12px'
                             fontWeight='700'
@@ -66,6 +50,7 @@ export const ModalCart = (props) => {
                             bottom='0'
                             gap='0.5rem'
                             width='9.8rem'
+                            position='relative'
                         >
                             <Text
                                 fontSize='10px'
@@ -78,6 +63,24 @@ export const ModalCart = (props) => {
                                 fontWeight='400'
                                 fontFamily='Roboto'
                             >{coffee.quantity}</Text>
+                            <Button
+                                bgColor='#F1E9C9'
+                                padding='0'
+                                minWidth='1rem'
+                                maxHeight='1rem'
+                                onClick={() => removeCoffeeOfCart(coffee)}
+                                position='absolute'
+                                right='0.5rem'
+                                bottom='0.1rem'
+
+                            >
+                                <Image
+                                    src={trashIcon}
+                                    alt='Trash Icon'
+                                    width='0.7rem'
+                                    height='0.7rem'
+                                />
+                            </Button>
                         </Flex>
                     </Flex>
                 </Flex>

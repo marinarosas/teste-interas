@@ -129,12 +129,16 @@ export const QuantityContainerStyled = styled.div`
 
     button{
         color:#8047F8;
-        background: none;
+        background: transparent;
         border: none;
-        width: 10.94px;
+        width: 1rem;
+        height: 1rem;
         font-size: 20px;
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         :hover{
             cursor: pointer;
