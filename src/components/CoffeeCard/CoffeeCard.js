@@ -18,7 +18,7 @@ export const CoffeeCard = (props) => {
 
   const { coffee, addCoffeeInCart } = props
 
-  let [quantityToAdd, setQuantityToAdd] = useState(0)
+  let [quantityToAdd, setQuantityToAdd] = useState(1)
 
   const increaseQuantityInCart = () => {
     setQuantityToAdd(Number(quantityToAdd) + 1)
