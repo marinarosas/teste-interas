@@ -4,13 +4,13 @@ import { AdvertisingTop } from '../components/AdvertisingTop/AdvertisingTop'
 import { CardapioTitleStyled, CoffeeCardsStyles } from './HomePage.styled'
 import { CoffeeCard } from '../components/CoffeeCard/CoffeeCard'
 import { GlobalContext } from '../contexts/GlobalContext'
-import { ModalCart } from '../components/Modal/ModalCart'
+//import { ModalCart } from '../components/Modal/ModalCart'
 
 export const HomePage = () => {
 
   const context = useContext(GlobalContext)
 
-  const { coffees, addCoffeeInCart, removeCoffeeOfCart, cart, isOpen, isOpenClose } = context
+  const { coffees, addCoffeeInCart, removeCoffeeOfCart, decreaseQuantityInCart, increaseQuantityInCart } = context
 
   return (
     <>
@@ -23,12 +23,11 @@ export const HomePage = () => {
             addCoffeeInCart={addCoffeeInCart}
             removeCoffeeOfCart={removeCoffeeOfCart}
             coffee={coffee}
-            cart={cart}
+            increaseQuantityInCart={increaseQuantityInCart}
+            decreaseQuantityInCart={decreaseQuantityInCart}
           />
         })}
       </CoffeeCardsStyles>
-      {isOpen ? <ModalCart></ModalCart> : <></>}
-      {isOpenClose ? <ModalCart></ModalCart> : <></>}
     </>
   )
 }

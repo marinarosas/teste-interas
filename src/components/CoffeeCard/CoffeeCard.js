@@ -5,10 +5,7 @@ import { priceFormatter } from '../../util/priceFormatter'
 
 export const CoffeeCard = (props) => {
 
-  const { coffee, addCoffeeInCart, removeCoffeeOfCart, cart, totalQuantity } = props
-
-  console.log("coffee:", coffee);
-  console.log("cart", cart);
+  const { coffee, addCoffeeInCart, increaseQuantityInCart, decreaseQuantityInCart } = props
 
   return (
     <CardBackgroundStyled key={coffee.id}>
@@ -31,11 +28,11 @@ export const CoffeeCard = (props) => {
         </div>
         <div>
           <QuantityContainerStyled>
-            <button onClick={(e)=>{removeCoffeeOfCart(e.target.value)}}>-</button>
-            {totalQuantity === undefined ? 0 : <h2>{totalQuantity}</h2>}
-            <button onClick={(e) => addCoffeeInCart(e.target.value)}>+</button>
+            <button onClick={() => decreaseQuantityInCart(coffee)}>-</button>
+            {coffee.quantity <= 0 ? <h2>0</h2> : <h2>{coffee.quantity}</h2>}
+            <button onClick={() => increaseQuantityInCart(coffee)}>+</button>
           </QuantityContainerStyled>
-          <CartPurpleIcon onClick={(e) => addCoffeeInCart(e.target.value)}>
+          <CartPurpleIcon onClick={() => addCoffeeInCart(coffee)}>
             <img src={cartIcon} alt='Cart Button Image'/>
           </CartPurpleIcon>
         </div>

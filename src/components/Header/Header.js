@@ -4,19 +4,20 @@ import cartIcon from '../../assets/icon/orangeCartIcon.svg'
 import locationIcon from '../../assets/icon/purpleLocationIcon.svg'
 import { ButtonsDivStyled, CartBtnStyled, CartQuantity, ContainerStyled, LocationIconStyled, LocationSpanStyled, LogoStyled } from './Header.styled';
 import { GlobalContext } from '../../contexts/GlobalContext';
+//import { ModalCart } from '../Modal/ModalCart';
 
 export const Header = () => {
 
     const context = useContext(GlobalContext)
 
-    const {totalQuantity, setIsOpen} = context
+    const { totalQuantity, setIsOpen, isOpen, isOpenClose } = context
 
     return (
         <ContainerStyled>
             <LogoStyled src={logo} alt='Image Logo' />
             <ButtonsDivStyled>
                 <LocationSpanStyled>
-                    <LocationIconStyled src={locationIcon} alt='Location Icon'/>
+                    <LocationIconStyled src={locationIcon} alt='Location Icon' />
                     <span>Porto Alegre, RS</span>
                 </LocationSpanStyled>
                 <CartBtnStyled onClick={setIsOpen(true)}>
@@ -24,6 +25,8 @@ export const Header = () => {
                     {totalQuantity === 0 ? <div></div> : <CartQuantity>{totalQuantity}</CartQuantity>}
                 </CartBtnStyled>
             </ButtonsDivStyled>
+            {/* {isOpen ? <ModalCart></ModalCart> : <></>}
+            {isOpenClose ? <ModalCart></ModalCart> : <></>} */}
         </ContainerStyled>
     )
 }
