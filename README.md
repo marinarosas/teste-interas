@@ -39,9 +39,9 @@
 
 ![Coffee Interas](./readme-images/CoffeeInteras.png)
 
-O Coffee Delivery foi um desafio da empresa Interas, criar uma aplicação de delivery de café.
+A criação da aplicação de delivery de café foi um desafio da empresa Interas.
 
-Os conteúdos principais  a serem utilizados são:
+Os conteúdos principais  a serem utilizados foram:
 
 - Listagem de produtos (cafés) disponíveis para compra
 - Adicionar uma quantidade específicas de itens no carrinho
@@ -63,6 +63,7 @@ O objetivo do projeto é desenvolver uma aplicação para gerenciar um carrinho 
 - Renderização de listas
 - Renderização condicional
 - Imutabilidade do estado
+- Chakra-UI
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,7 +94,7 @@ https://coffee-interas.vercel.app/
 <!-- GETTING STARTED -->
 ## Getting Started 
 
-Esse é um exemplo das intruções de como você configura o projeto localmente.
+Esse é um exemplo das instruções de como configurar o projeto.
 Para ter uma copia local, siga os passos abaixo:
 
 ### Pré-requisitos
@@ -142,7 +143,7 @@ Project Link: [https://github.com/marinajaudy/teste-interas.git](https://github.
 <!-- ACKNOWLEDGMENTS -->
 ## Agradecimentos
 
-* Obrigada pela oportunidade
+Desde já, agradeço pela oportunidade!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
