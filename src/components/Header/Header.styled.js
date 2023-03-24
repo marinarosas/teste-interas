@@ -52,3 +52,20 @@ export const CartBtnStyled = styled.button`
     border: none;
     border-radius: 6px;
 `
+export const CartQuantity = styled.div`
+    background-color: #C47F17;
+    position: absolute;
+    top: 3.6rem;
+    right: 8.3rem;
+    color: black;
+    border-radius: 50%;
+    border: 2px solid #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+    color: #F1E9C9;
+`

@@ -1,28 +1,42 @@
 import React from 'react'
-import { CardBackgroundStyled, CoffeeImgStyled, CoffeeNameStyled, CoffeeTypeStyled } from './CoffeeCard.styled'
+import { BodyOfCardStyled, BtnPriceStyled, CardBackgroundStyled, CartPurpleIcon, CoffeeDescriptionStyled, CoffeeImgStyled, CoffeeNameStyled, CoffeeTypeStyled, QuantityContainerStyled, TypesContainerStyled } from './CoffeeCard.styled'
 import cartIcon from '../../assets/icon/cartPurpleIcon.svg'
+import { priceFormatter } from '../../util/priceFormatter'
 
 export const CoffeeCard = (props) => {
 
-  const {coffee, addCoffeeInCart, removeCoffeeOfCart} = props
+  const { coffee, addCoffeeInCart, increaseQuantityInCart, decreaseQuantityInCart } = props
 
   return (
-   <CardBackgroundStyled key={coffee.id}>
-    <CoffeeImgStyled src={coffee.image} alt='Coffee Image'/>
-    <CoffeeTypeStyled>{coffee.types[0]}</CoffeeTypeStyled>
-    <CoffeeTypeStyled>{coffee.types[1]}</CoffeeTypeStyled>
-    <CoffeeNameStyled>{coffee.name}</CoffeeNameStyled>
-    <p>{coffee.description}</p>
-    <p>{coffee.price}</p>
-
-    <div>
-      <button onClick={removeCoffeeOfCart}>-</button>
-      <h2>{coffee.quantity}</h2>
-      <button onClick={addCoffeeInCart}>+</button>
-    </div>
-
-      <img src={cartIcon} alt='Cart Button Image'></img>
-
-   </CardBackgroundStyled>
+    <CardBackgroundStyled key={coffee.id}>
+      <BodyOfCardStyled>
+        <CoffeeImgStyled src={coffee.image} alt='Coffee Image' />
+        <TypesContainerStyled>
+          {
+            coffee.types?.map((type) => {
+              return <CoffeeTypeStyled key={type}>{type}</CoffeeTypeStyled>
+            })
+          }
+        </TypesContainerStyled>
+        <CoffeeNameStyled>{coffee.name}</CoffeeNameStyled>
+        <CoffeeDescriptionStyled>{coffee.description}</CoffeeDescriptionStyled>
+      </BodyOfCardStyled>
+      <BtnPriceStyled>
+        <div>
+          <h2>R$</h2>
+          <p>{priceFormatter.format(coffee.price)}</p>
+        </div>
+        <div>
+          <QuantityContainerStyled>
+            <button onClick={() => decreaseQuantityInCart(coffee)}>-</button>
+            {coffee.quantity <= 0 ? <h2>0</h2> : <h2>{coffee.quantity}</h2>}
+            <button onClick={() => increaseQuantityInCart(coffee)}>+</button>
+          </QuantityContainerStyled>
+          <CartPurpleIcon onClick={() => addCoffeeInCart(coffee)}>
+            <img src={cartIcon} alt='Cart Button Image'/>
+          </CartPurpleIcon>
+        </div>
+      </BtnPriceStyled>
+    </CardBackgroundStyled>
   )
 }

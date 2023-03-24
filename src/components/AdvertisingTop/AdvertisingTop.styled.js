@@ -3,96 +3,106 @@ import backgroundTop from '../../assets/backgroundAdvertisingTop.svg'
 
 export const AdvertisingTopStyled = styled.div`
     //border: 1px solid yellow;
-    height: 544px;
+    height: 34rem;
     background-image: url(${backgroundTop});
-    padding: 94px;
+    padding: 5.8rem;
     display: flex;
     justify-content: center;
-    gap: 56px;
+    gap: 3rem;
     align-items: center;
 `
 
 export const TextStyled = styled.div`
     //border: 1px solid blue;
-    width: 588px;
-    height: 360px;
+    width: 36.75rem;
+    height: 22.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 3.5rem;
 `
 
 export const TitlesStyled = styled.div`
     //border: 1px solid red;
-    width: 588px;
+    width: 36.75rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 1rem;
 
     h1{
         font-family: 'Baloo 2', cursive;
         font-weight: 800;
-        font-size: 48px;
-        line-height: 62.4px;
+        font-size: 3rem;
+        line-height: 130%;
         color: #272221;
-        height: 124px;
+        height: 7.75rem;
     }
 
     h3{
         font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 130%;
         color: #403937;
         font-stretch: 100;
-        height: 52px;
+        height: 3.25rem;
     }
 
 `
 
 export const BenefitStyled = styled.div`
     //border: 1px solid pink;
-    width: 588px;
-    height: 180px;
+    width: 36.75rem;
+    height: 11.25rem;
     display: flex;
-    justify-content: flex-start;
+    position: relative;
     align-items: center;
-    gap: 50px;
+    gap: 2rem;
 `
 
 export const LeftSideStyled = styled.div`
     //border: 1px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 31px;
+    gap: 1.2rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 130%;
     font-style: normal;
     color: #574F4D;
-    width: 588px;
+    width: 36.75rem;
 
     div{
         //border: 1px solid blue;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-self: center;
         align-items: center;
-        gap: 12px;
-        height: 31px;
-        width: 240px;
+        height: 2rem;
+        width: 15rem;
+        text-align: left;
+        position: relative;
     }
 
     img{
         //border: 1px solid green;
-        height: 32px;
-        width: 32px;
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+    }
+
+    p{
+        display: flex;
+        justify-self: flex-start;
+        position: absolute;
+        left: 2.5rem;
     }
 `
 
@@ -100,31 +110,40 @@ export const RightSideStyled = styled.div`
     //border: 1px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 31px;
+    gap: 1.2rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 130%;
     font-style: normal;
     color: #574F4D;
-    width: 588px;
+    width: 36.75rem;
 
     div{
-        //border: 1px solid blue;
+       //border: 1px solid blue;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-self: center;
         align-items: center;
-        gap: 12px;
-        height: 31px;
-        width: 300px;
+        height: 2rem;
+        width: 30rem;
+        text-align: left;
+        position: relative;
     }
 
     img{
-        //border: 1px solid green;
-        height: 32px;
-        width: 32px;
+       //border: 1px solid green;
+       height: 2rem;
+        width: 2rem;
+        position: absolute;
+    }
+
+    p{
+        display: flex;
+        justify-self: flex-start;
+        position: absolute;
+        left: 2.5rem;
     }
 `
