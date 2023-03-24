@@ -39,7 +39,7 @@
 
 ![Coffee Interas](./readme-images/CoffeeInteras.png)
 
-O Coffee Interas foi um desafio da empresa Interas, criar uma aplicação de delivery de café.
+O Coffee Delivery foi um desafio da empresa Interas, criar uma aplicação de delivery de café.
 
 Os conteúdos principais  a serem utilizados são:
 
