@@ -1,11 +1,11 @@
 
-<h3 align="center">Projeto React APIs</h3>
+<h3 align="center">Coffee Interas</h3>
 <a name="readme-top"></a>
 
 <p align="center">
-    Um site com pokemons para você capturar na sua pokedex.
+    Uma aplicação para compras de uma cafeteria fictícia.
     <br />
-    <a href="https://projeto-react-apis-chi.vercel.app/"><strong>Explore o documento »</strong></a>
+    <a href="https://coffee-interas.vercel.app/"><strong>Explore o documento »</strong></a>
     <br />
   </p>
 </div>
@@ -29,7 +29,6 @@
       </ul>
     </li>
     <li><a href="#uso">Uso</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contato">Contato</a></li>
     <li><a href="#agradecimentos">Agradecimentos</a></li>
   </ol>
@@ -40,51 +39,39 @@
 
 [![Product Name Screen Shot][product-screenshot]](www.exemplo.com)
 
-O Projeto React e APIs é um site de pokémons que possui três páginas: Home, Pokedex e Detalhes. O projeto está subdivido em temas de acordo com os conteúdos que estudado durante o Módulo 2 - Frontend no bootcamp da Labenu.
-
-Este projeto terá como fonte de dados para a sua criação a [Poke Api](https://pokeapi.co/ "Poke Api"), uma Api pública, muito usada para aplicações focadas em aprendizado de programação e também usada em cases de processos seletivos.
+O Coffee Interas foi um desafio da empresa Interas, criar uma aplicação de delivery de café.
 
 Os conteúdos principais  a serem utilizados são:
 
-- Integração de APIs
-- React Router
-- Design Systems
-- Estado Global
+- Listagem de produtos (cafés) disponíveis para compra
+- Adicionar uma quantidade específicas de itens no carrinho
+- Aumentar ou remover a quantidade de itens no carrinho
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GOAL-->
 ## **Objetivo**
-O objetivo deste projeto criar um site com três páginas usando a [PokeApi - API](https://pokeapi.co/) com as seguintes ferramentas:
+
+O objetivo do projeto é desenvolver uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia, com as seguintes ferramentas:
 
 - React
-- React Router
 - Styled-components
-- React Context
-- Axios
+- Componentes
+- Props
+- Estado
+- Fluxo de dados no React
+- Renderização de listas
+- Renderização condicional
+- Imutabilidade do estado
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- REQUIREMENTS -->
 ### **Requisitos**
 - **Gerais:**
-	- [x] O site deve ter 3 páginas: Home, Pokedex e Detalhes;
-	- [x] Projeto deve seguir o [design](https://www.figma.com/file/KseyA2Ofghiek2Cy3ZaDre/Poked%C3%A9x?t=AEi3zEmWmarf1FbP-0 "design") proposto;
-	- [x] O fluxo de trocas de páginas devem ser semelhante ao [fluxograma](https://www.figma.com/proto/KseyA2Ofghiek2Cy3ZaDre/Poked%C3%A9x?page-id=0%3A1&node-id=2%3A2&viewport=358%2C197%2C0.27&scaling=scale-down&starting-point-node-id=2%3A2 "fluxograma");
-- **Página Home:**
-	- [x]  Mostrar uma lista de Pokemons, contendo ao menos 20 Pokemons;
-	- [x] Cada Pokemon será representado por um Card;
-	- [x] Em cada card de Pokemon tem um botão para adicioná-lo à Pokedex e um outro botão para acessar os detalhes do Pokemon;
-	- [x] Header dessa página terá um botão para acessar a página da Pokedex
-- **Página Pokédex**
-	- [x] Renderizar a lista de pokémons adicionados na pokedex;
-	- [x] Em cada card de Pokemon deve ter um botão para removê-lo da Pokedex e um outro botão para acessar os detalhes do Pokemon.
-	- [x] Header deve ter um botão para voltar para a Home
-	- [x] Não deve ser possível adicionar o mesmo Pokemon duas vezes na Pokedex
-- **Página de Detalhes**
-	- [x] Mostrar os detalhes do Pokemon selecionado, com informações descritas
-	- [x] Header deve ter um botão para adicionar ou remover da Pokedex e outro para voltar a página home.
-  - [x] [Criar um readme](https://www.youtube.com/watch?v=1QKwP0SJK-c "Crie um readme") para o projeto;
+	- [x] Listagem de produtos (cafés) disponíveis para compra;
+	- [x] Adicionar uma quantidade específicas de itens no carrinho;
+	- [x] Aumentar ou remover a quantidade de itens no carrinho;
 	
 	<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,7 +88,7 @@ O objetivo deste projeto criar um site com três páginas usando a [PokeApi - AP
 ### **Deployment**
 
 Versel:
-https://projeto-react-apis-chi.vercel.app/
+https://coffee-interas.vercel.app/
 
 <!-- GETTING STARTED -->
 ## Getting Started 
@@ -120,11 +107,15 @@ Para ter uma copia local, siga os passos abaixo:
 
 1. Clone do repositório
    ```sh
-   git clone https://github.com/marinajaudy/projeto-frontendreact.git
+   git clone https://github.com/marinajaudy/teste-interas.git
    ```
 2. Install NPM packages
    ```sh
    npm install
+   ```
+3. Install Chakra-UI packages
+   ```sh
+   npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -132,19 +123,7 @@ Para ter uma copia local, siga os passos abaixo:
 <!-- USAGE -->
 ## Uso
 
-Site onde você pode capturar seus pokemons para sua própria Pokedex. Além disso, é possível ver informações detalhadas do pokemon da sua escolha.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-## Roadmap
-
--  HomePage
-	* Página com 21 pokemons da API PokeAPI. 
--  Pokedex Page
-	* Página  todos os pokemons que você capturar para sua pokedex.
--  Details Page
-    * Informações detalhadas sobre o pokemon selecionado.
+Site onde você pode adicionar produtos no carrinho. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -153,7 +132,7 @@ Site onde você pode capturar seus pokemons para sua própria Pokedex. Além dis
 
 Marina Jaudy  - marinarrjaudy@hotmail.com
 
-Project Link: [https://github.com/marinajaudy/projeto-react-apis.git](https://github.com/marinajaudy/projeto-react-apis.git)
+Project Link: [https://github.com/marinajaudy/teste-interas.git](https://github.com/marinajaudy/teste-interas.git)
 <br/>
 
 [![Linkedin](https://img.shields.io/badge/linkedin-%230A66C2.svg?&style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/andrejaques/)](https://www.linkedin.com/in/marina-jaudy)
@@ -163,9 +142,7 @@ Project Link: [https://github.com/marinajaudy/projeto-react-apis.git](https://gi
 <!-- ACKNOWLEDGMENTS -->
 ## Agradecimentos
 
-* [PokeApi - API](https://pokeapi.co/)
-* Aos professores da Labenu
-* Meus colegas de sala que me ajudaram no processo do projeto
+* Obrigada pela oportunidade
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
