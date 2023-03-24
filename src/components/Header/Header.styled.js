@@ -8,20 +8,20 @@ export const ContainerStyled = styled.div`
     height: 6.5rem;
     background-color: #FAFAFA;
     font-family: 'Roboto', sans-serif;
-    gap: 640px;
+    gap: 40rem;
    
 `
 
 export const LogoStyled = styled.img`
-    height: 40px;
-    width: 84.95px;
+    height: 2.5rem;
+    width: 5.3rem;
 `
 export const ButtonsDivStyled = styled.div`
     //border: 1px solid blue;
-    width: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 `
 
 export const LocationIconStyled = styled.img`
@@ -34,9 +34,9 @@ export const LocationSpanStyled = styled.div`
     justify-content: center;
     align-items: center;
     color: #4B2995;
-    height: 38px;
-    padding: 8px;
-    gap: 8px;
+    height: 2.4rem;
+    padding: 0.5rem;
+    gap: 0.5rem;
     border-radius: 6px;
 `
 
@@ -45,10 +45,10 @@ export const CartBtnStyled = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px;
+    padding: 0.5rem;
     gap: 4px;
-    width: 38x;
-    height: 38px;
+    width: 2.4rem;
+    height: 2.4rem;
     border: none;
     border-radius: 6px;
 `
@@ -56,7 +56,7 @@ export const CartQuantity = styled.div`
     background-color: #C47F17;
     position: absolute;
     top: 3.6rem;
-    right: 8.3rem;
+    right: 7.3rem;
     color: black;
     border-radius: 50%;
     border: 2px solid #FAFAFA;

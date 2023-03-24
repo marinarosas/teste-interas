@@ -140,6 +140,12 @@ export const QuantityContainerStyled = styled.div`
         :hover{
             cursor: pointer;
         }
+
+        div{
+           background-color: #8047F8;
+           width: 10.94px;
+           height: 1.31px;
+        }
     }
 
 `
