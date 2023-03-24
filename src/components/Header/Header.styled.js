@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerStyled = styled.div`
-    //border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,7 +8,6 @@ export const ContainerStyled = styled.div`
     background-color: #FAFAFA;
     font-family: 'Roboto', sans-serif;
     gap: 40rem;
-   
 `
 
 export const LogoStyled = styled.img`
@@ -17,7 +15,6 @@ export const LogoStyled = styled.img`
     width: 5.3rem;
 `
 export const ButtonsDivStyled = styled.div`
-    //border: 1px solid blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,6 +25,7 @@ export const LocationIconStyled = styled.img`
     width: 15.13px;
     height: 19.25px;
 `
+
 export const LocationSpanStyled = styled.div`
     background-color: #EBE5F9;
     display: flex;
@@ -51,12 +49,13 @@ export const CartBtnStyled = styled.button`
     height: 2.4rem;
     border: none;
     border-radius: 6px;
+    position: relative;
 `
 export const CartQuantity = styled.div`
     background-color: #C47F17;
     position: absolute;
-    top: 3.6rem;
-    right: 7.3rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
     color: black;
     border-radius: 50%;
     border: 2px solid #FAFAFA;

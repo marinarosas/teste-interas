@@ -10,6 +10,7 @@ export const CardBackgroundStyled = styled.div`
     align-items: center;
     position: relative;
 `
+
 export const BodyOfCardStyled = styled.div`
     display: flex;
     flex-direction: column;
@@ -22,7 +23,6 @@ export const CoffeeImgStyled = styled.img`
     width: 7.5rem;
     height: 7.5rem;
 `
-
 export const TypesContainerStyled = styled.div`
     display: flex;
     gap: 4px;
@@ -68,7 +68,6 @@ export const CoffeeDescriptionStyled = styled.div`
     line-height: 130%;
     color: #8D8686;
     text-align: center;
-
 `
 
 export const BtnPriceStyled = styled.div`
@@ -147,7 +146,6 @@ export const QuantityContainerStyled = styled.div`
            height: 1.31px;
         }
     }
-
 `
 
 export const CartPurpleIcon = styled.button`
