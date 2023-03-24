@@ -37,8 +37,8 @@
 <!-- ABOUT THE PROJECT-->
 # **Sobre o Projeto**
 
-[![Product Name Screen Shot][CoffeeInteras]](www.exemplo.com)
-[![Product Name Vídeos][TesteInteras]](www.exemplo.com)
+![Coffee Interas](/readme-images/CoffeeInteras)
+![Coffee Interas Vídeo](/readme-images/TesteInteras.mov)
 
 O Coffee Interas foi um desafio da empresa Interas, criar uma aplicação de delivery de café.
 
