@@ -1,21 +1,37 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import logo from '../../assets/logo.svg';
-import cartIcon from '../../assets/icon/orangeCartIcon.svg'
-import locationIcon from '../../assets/icon/purpleLocationIcon.svg'
-import { ButtonsDivStyled, CartBtnStyled, CartQuantity, ContainerStyled, LocationIconStyled, LocationSpanStyled, LogoStyled } from './Header.styled';
-import { GlobalContext } from '../../contexts/GlobalContext';
-import { ModalCart } from '../Modal/ModalCart';
-import { Button, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, Flex, Text } from '@chakra-ui/react';
+import cartIcon from '../../assets/icon/orangeCartIcon.svg';
+import locationIcon from '../../assets/icon/purpleLocationIcon.svg';
+import {
+    ButtonsDivStyled,
+    CartBtnStyled,
+    CartQuantity,
+    ContainerStyled,
+    LocationIconStyled,
+    LocationSpanStyled,
+    LogoStyled
+} from './Header.styled';
+import { ModalCart } from '../ModalCart/ModalCart';
+import {
+    Button,
+    Popover,
+    PopoverArrow,
+    PopoverBody,
+    PopoverCloseButton,
+    PopoverContent,
+    PopoverHeader,
+    PopoverTrigger,
+    Flex,
+    Text
+} from '@chakra-ui/react';
 import { priceFormatter } from '../../util/priceFormatter';
 
-export const Header = () => {
+export const Header = (props) => {
 
-    const context = useContext(GlobalContext)
+    const { totalQuantity, totalPrice, cart, removeCoffeeOfCart } = props
 
-    const { coffees, totalQuantity, totalPrice, setIsOpen, isOpen, cart } = context
-
-    const cartDetails = () => {
-
+    const alertSuccess = () =>{
+        return alert("Compra finalizada com sucesso!")
     }
 
     return (
@@ -29,7 +45,7 @@ export const Header = () => {
                 <Popover trigger='hover'>
                     <PopoverTrigger >
                         <CartBtnStyled>
-                            <img src={cartIcon} alt='Icon Cart'></img>
+                            <img src={cartIcon} alt='Icon Cart' />
                             {totalQuantity === 0 ? <div></div> : <CartQuantity>{totalQuantity}</CartQuantity>}
                         </CartBtnStyled>
                     </PopoverTrigger>
@@ -37,43 +53,39 @@ export const Header = () => {
                         <PopoverArrow />
                         <PopoverCloseButton />
                         <PopoverHeader fontFamily='Baloo2' fontWeight='700'>Coffee Bag!</PopoverHeader>
-                        <PopoverBody>{cart.map((coffee) => {
-                            return <ModalCart key={cart.id} coffee={coffee} />
+                        <PopoverBody
+                            display='flex'
+                            flexDirection='column'
+                            justifyContent='flex-start'
+                            alignItems='flex-start'
+                            gap='1rem'
+                        >{cart.map((coffee) => {
+                            return <ModalCart key={cart.id}
+                                coffee={coffee}
+                                totalPrice={totalPrice}
+                                removeCoffeeOfCart={removeCoffeeOfCart} />
                         })}
-                        <Flex
-                        //alignItems='flex-end'
-                        justifyContent='flex-end'
-                        flexDirection='column'
-                        gap= '1rem'
-                        >
                             <Flex
-                                //border='2px solid purple'
-                                gap='1rem'    
+                                justifyContent='flex-end'
+                                flexDirection='column'
+                                gap='1rem'
                             >
-                                <Text
-                                    fontWeight='400'
-                                    fontFamily='Roboto'
-                                >Valor Total sem frete:</Text>
-                                <Text
-                                    fontWeight='400'
-                                    fontFamily='Roboto'
-                                >R${priceFormatter.format(totalPrice)}
-                                </Text>
-                            </Flex>
-                            <Button
-                                bgColor='#F1E9C9'
-                                color='#C47F17'
-                                justifyContent='center'
-                                alignItems='center'
-                            >Ver Carrinho</Button>
+                                <Flex gap='1rem'>
+                                    <Text fontWeight='400' fontFamily='Roboto'>Valor Total:</Text>
+                                    <Text fontWeight='400' fontFamily='Roboto'>R${priceFormatter.format(totalPrice)}</Text>
+                                </Flex>
+                                <Button
+                                    bgColor='#F1E9C9'
+                                    color='#C47F17'
+                                    justifyContent='center'
+                                    alignItems='center'
+                                    onClick={()=>alertSuccess()}
+                                >Finalizar Compra</Button>
                             </Flex>
                         </PopoverBody>
                     </PopoverContent>
                 </Popover>
-
             </ButtonsDivStyled>
-
         </ContainerStyled>
-
     )
 }

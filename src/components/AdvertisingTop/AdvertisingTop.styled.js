@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import backgroundTop from '../../assets/backgroundAdvertisingTop.svg'
+import backgroundTop from '../../assets/backgroundAdvertisingTop.svg';
 
 export const AdvertisingTopStyled = styled.div`
-    //border: 1px solid yellow;
     height: 34rem;
     background-image: url(${backgroundTop});
     padding: 5.8rem;
@@ -13,7 +12,6 @@ export const AdvertisingTopStyled = styled.div`
 `
 
 export const TextStyled = styled.div`
-    //border: 1px solid blue;
     width: 36.75rem;
     height: 22.5rem;
     display: flex;
@@ -24,7 +22,6 @@ export const TextStyled = styled.div`
 `
 
 export const TitlesStyled = styled.div`
-    //border: 1px solid red;
     width: 36.75rem;
     display: flex;
     flex-direction: column;
@@ -51,7 +48,6 @@ export const TitlesStyled = styled.div`
         font-stretch: 100;
         height: 3.25rem;
     }
-
 `
 
 export const BenefitStyled = styled.div`
@@ -65,7 +61,6 @@ export const BenefitStyled = styled.div`
 `
 
 export const LeftSideStyled = styled.div`
-    //border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,7 +75,6 @@ export const LeftSideStyled = styled.div`
     width: 36.75rem;
 
     div{
-        //border: 1px solid blue;
         display: flex;
         flex-direction: row;
         justify-self: center;
@@ -92,7 +86,6 @@ export const LeftSideStyled = styled.div`
     }
 
     img{
-        //border: 1px solid green;
         height: 2rem;
         width: 2rem;
         position: absolute;
@@ -107,7 +100,6 @@ export const LeftSideStyled = styled.div`
 `
 
 export const RightSideStyled = styled.div`
-    //border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,7 +114,6 @@ export const RightSideStyled = styled.div`
     width: 36.75rem;
 
     div{
-       //border: 1px solid blue;
         display: flex;
         flex-direction: row;
         justify-self: center;
@@ -134,7 +125,6 @@ export const RightSideStyled = styled.div`
     }
 
     img{
-       //border: 1px solid green;
        height: 2rem;
         width: 2rem;
         position: absolute;

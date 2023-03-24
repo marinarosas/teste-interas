@@ -18,5 +18,4 @@ export const CoffeeCardsStyles = styled.div`
     padding: 0 7.5rem;
     padding-top: 4rem;
     height: 99rem;
-
 `

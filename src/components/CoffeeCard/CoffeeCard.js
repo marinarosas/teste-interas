@@ -1,27 +1,43 @@
-import React, { useContext } from 'react'
-import { BodyOfCardStyled, BtnPriceStyled, CardBackgroundStyled, CartPurpleIcon, CoffeeDescriptionStyled, CoffeeImgStyled, CoffeeNameStyled, CoffeeTypeStyled, QuantityContainerStyled, TypesContainerStyled } from './CoffeeCard.styled'
-import cartIcon from '../../assets/icon/cartPurpleIcon.svg'
-import { priceFormatter } from '../../util/priceFormatter'
-import { GlobalContext } from '../../contexts/GlobalContext'
+import React, { useState } from 'react';
+import {
+  BodyOfCardStyled,
+  BtnPriceStyled,
+  CardBackgroundStyled,
+  CartPurpleIcon,
+  CoffeeDescriptionStyled,
+  CoffeeImgStyled,
+  CoffeeNameStyled,
+  CoffeeTypeStyled,
+  QuantityContainerStyled,
+  TypesContainerStyled
+} from './CoffeeCard.styled';
+import cartIcon from '../../assets/icon/cartPurpleIcon.svg';
+import { priceFormatter } from '../../util/priceFormatter';
 
 export const CoffeeCard = (props) => {
 
-  const context = useContext(GlobalContext)
+  const { coffee, addCoffeeInCart } = props
 
-  const { quantityToAdd } = context
+  let [quantityToAdd, setQuantityToAdd] = useState(0)
 
-  const { coffee, addCoffeeInCart, increaseQuantityInCart, decreaseQuantityInCart } = props
+  const increaseQuantityInCart = () => {
+    setQuantityToAdd(Number(quantityToAdd) + 1)
+  }
+
+  const decreaseQuantityInCart = () => {
+    if (quantityToAdd > 1) {
+      setQuantityToAdd(Number(quantityToAdd) - 1)
+    }
+  }
 
   return (
-    <CardBackgroundStyled key={coffee.id}>
+    <CardBackgroundStyled>
       <BodyOfCardStyled>
         <CoffeeImgStyled src={coffee.image} alt='Coffee Image' />
         <TypesContainerStyled>
-          {
-            coffee.types?.map((type) => {
-              return <CoffeeTypeStyled key={type}>{type}</CoffeeTypeStyled>
-            })
-          }
+          {coffee.types?.map((type) => {
+            return <CoffeeTypeStyled key={type}>{type}</CoffeeTypeStyled>
+          })}
         </TypesContainerStyled>
         <CoffeeNameStyled>{coffee.name}</CoffeeNameStyled>
         <CoffeeDescriptionStyled>{coffee.description}</CoffeeDescriptionStyled>
@@ -35,11 +51,10 @@ export const CoffeeCard = (props) => {
           <QuantityContainerStyled>
             <button onClick={() => decreaseQuantityInCart()}><div></div></button>
             <h3>{quantityToAdd}</h3>
-            {/* {coffee.quantity <= 0 ? <h2>0</h2> : <h3>{coffee.quantity}</h3>} */}
             <button onClick={() => increaseQuantityInCart()}>+</button>
           </QuantityContainerStyled>
-          <CartPurpleIcon onClick={() => addCoffeeInCart(coffee)}>
-            <img src={cartIcon} alt='Cart Button Image'/>
+          <CartPurpleIcon onClick={() => addCoffeeInCart(coffee, quantityToAdd)}>
+            <img src={cartIcon} alt='Cart Button Image' />
           </CartPurpleIcon>
         </div>
       </BtnPriceStyled>
