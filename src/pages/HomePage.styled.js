@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
-export const HomeContainer = styled.main`
-    //border: 1px solid green;
-`
-
 export const CardapioTitleStyled = styled.h1`
-    //border: 1px solid pink;
     height: 2.6rem;
     font-family: 'Baloo 2', cursive;
     font-weight: 800;
@@ -17,12 +12,9 @@ export const CardapioTitleStyled = styled.h1`
 `
 
 export const CoffeeCardsStyles = styled.div`
-    //border: 2px solid brown;
-    display: flex;
-    flex-flow: row wrap;
-    //justify-content: flex-start;
-    //flex-wrap: wrap;
-    gap: 2.5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     padding: 0 7.5rem;
     padding-top: 4rem;
     height: 99rem;

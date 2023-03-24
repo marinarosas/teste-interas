@@ -11,7 +11,6 @@ export const CardBackgroundStyled = styled.div`
     position: relative;
 `
 export const BodyOfCardStyled = styled.div`
-    //border: 2px solid black;
     display: flex;
     flex-direction: column;
     gap: .8rem;
@@ -20,7 +19,6 @@ export const BodyOfCardStyled = styled.div`
 `
 
 export const CoffeeImgStyled = styled.img`
-    //border: 2px solid purple;
     width: 7.5rem;
     height: 7.5rem;
 `
@@ -50,7 +48,6 @@ export const CoffeeTypeStyled = styled.div`
 `
 
 export const CoffeeNameStyled = styled.h2`
-    //border: 2px solid green;
     font-family: 'Baloo 2', cursive;
     display: flex;
     justify-content: center;
@@ -62,7 +59,6 @@ export const CoffeeNameStyled = styled.h2`
 `
 
 export const CoffeeDescriptionStyled = styled.div`
-    //border: 2px solid red;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     width: 13rem;
@@ -76,7 +72,6 @@ export const CoffeeDescriptionStyled = styled.div`
 `
 
 export const BtnPriceStyled = styled.div`
-    //border: 2px solid red;
     display: flex;
     align-items: center;
     position: absolute;
@@ -86,7 +81,6 @@ export const BtnPriceStyled = styled.div`
     height: 31px;
 
     h2{
-        //border: 2px solid green;
         font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -112,7 +106,6 @@ export const BtnPriceStyled = styled.div`
 `
 
 export const QuantityContainerStyled = styled.div`
-        //border: 2px solid blue;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -133,7 +126,6 @@ export const QuantityContainerStyled = styled.div`
         font-size: 16px;
         text-align: center;
         color: #272221;
-        flex-grow: 0;
     }
 
     button{
@@ -144,6 +136,18 @@ export const QuantityContainerStyled = styled.div`
         font-size: 20px;
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
+
+        :hover{
+            cursor: pointer;
+        }
     }
 
+`
+
+export const CartPurpleIcon = styled.button`
+    border: none;
+
+    :hover{
+        cursor: pointer;
+    }
 `
