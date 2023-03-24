@@ -5,7 +5,7 @@ export const ContainerStyled = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 6.5rem;
-    background-color: #FAFAFA;
+    background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     gap: 40rem;
 `

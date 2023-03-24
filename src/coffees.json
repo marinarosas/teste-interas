@@ -74,7 +74,7 @@
     {
         "id": "c010",
         "name": "Chocolate Quente",
-        "description": "Bebida feita com chocolate dissolvido no meite quente e café",
+        "description": "Bebida feita com chocolate dissolvido no leite quente e café",
         "price": 9.90,
         "image": "./image/chocolateQuente.svg",
         "types": ["especial", "com leite"]

@@ -3,7 +3,6 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
     *{
         padding: 0;
-        margin: 0;
         box-sizing: border-box;
         max-width: 1440px;
         margin: 0 auto;
